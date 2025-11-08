@@ -1,4 +1,5 @@
 export PATH="$HOME/.local/bin:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
@@ -42,3 +43,4 @@ export PATH="$HOME/intellij-idea/bin:$PATH"
 
 # golang
 export PATH="$PATH:/usr/local/go/bin"
+
