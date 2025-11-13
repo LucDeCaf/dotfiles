@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "blink.cmp": { "branch": "main", "commit": "7d79733aea5ef9e030b1a5ace176fa102e9ebe09" },
+=======
+  "blink.cmp": { "branch": "main", "commit": "de573225b473eb053c356b2c2f5d65aead24b66d" },
+>>>>>>> e545826 (update nvim packages)
   "catppuccin": { "branch": "main", "commit": "234fc048de931a0e42ebcad675bf6559d75e23df" },
   "conform.nvim": { "branch": "master", "commit": "cde4da5c1083d3527776fee69536107d98dae6c9" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
@@ -8,7 +12,11 @@
   "mason-lspconfig.nvim": { "branch": "main", "commit": "b1d9a914b02ba5660f1e272a03314b31d4576fe2" },
   "mason.nvim": { "branch": "main", "commit": "ad7146aa61dcaeb54fa900144d768f040090bff0" },
   "mini.icons": { "branch": "main", "commit": "ff2e4f1d29f659cc2bad0f9256f2f6195c6b2428" },
+<<<<<<< HEAD
   "nvim-lspconfig": { "branch": "master", "commit": "c8503e63c6afab3ed34b49865a4a4edbb1ebf4a8" },
+=======
+  "nvim-lspconfig": { "branch": "master", "commit": "b34fbdffdcb6295c7a25df6ba375452a2e73c32e" },
+>>>>>>> e545826 (update nvim packages)
   "nvim-treesitter": { "branch": "main", "commit": "b50774079aa3de80a06dce1634e7e1aa26d25848" },
   "nvim-web-devicons": { "branch": "master", "commit": "8dcb311b0c92d460fac00eac706abd43d94d68af" },
   "oil.nvim": { "branch": "master", "commit": "7e1cd7703ff2924d7038476dcbc04b950203b902" },
