@@ -16,5 +16,6 @@ vim.opt.mouse = "a"
 
 vim.o.termguicolors = true
 vim.o.signcolumn = "number"
+vim.o.winborder = "rounded"
 
 vim.diagnostic.config({ virtual_text = true })
