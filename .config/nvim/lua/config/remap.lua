@@ -1,5 +1,3 @@
-vim.keymap.set("n", "<leader>rl", "<cmd>source $HOME/.config/nvim/init.lua<CR>", { desc = "Reload Neovim config" })
-
 vim.keymap.set("n", "<leader>Th", "<cmd>vsp term://zsh<CR>i", { desc = "Open terminal left of buffer" })
 vim.keymap.set("n", "<leader>Tj", "<cmd>sp term://zsh<CR><C-w>Ri", { desc = "Open terminal above buffer" })
 vim.keymap.set("n", "<leader>Tk", "<cmd>sp term://zsh<CR>i", { desc = "Open terminal below buffer" })
@@ -18,6 +16,20 @@ vim.keymap.set("n", "<leader>e", "<cmd>Oil<CR>", { desc = "Open Oil file explore
 vim.keymap.set("n", "<leader>ll", "<cmd>Lazy<CR>", { desc = "Open Lazy" })
 vim.keymap.set("n", "<leader>mn", "<cmd>Mason<CR>", { desc = "Open Mason" })
 vim.keymap.set({ "n", "v" }, "gd", "<C-]>", { desc = "Go to definition" })
+
+vim.keymap.set("n", "<leader>ca", function()
+	vim.lsp.buf.code_action()
+end, { desc = "Code actions" })
+vim.keymap.set("v", "<leader>ca", function()
+	vim.lsp.buf.code_action({ range = true })
+end, { desc = "Code actions (range)" })
+vim.keymap.set("n", "<Esc>", function()
+	for _, win in ipairs(vim.api.nvim_list_wins()) do
+		if vim.api.nvim_win_get_config(win).relative == "win" then
+			vim.api.nvim_win_close(win, false)
+		end
+	end
+end, { desc = "Close floating windows" })
 
 vim.keymap.set({ "n", "v", "x" }, "<leader>y", '"+y', { desc = "Yank to system clipboard" })
 vim.keymap.set({ "n", "v", "x" }, "<leader>d", '"+d', { desc = "Delete to system clipboard" })
