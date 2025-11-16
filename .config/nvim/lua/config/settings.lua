@@ -5,6 +5,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smarttab = true
 vim.opt.swapfile = false
+vim.opt.scrolloff = 5
 
 vim.opt.syntax = "on"
 vim.opt.filetype = "on"
