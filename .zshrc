@@ -44,3 +44,13 @@ export PATH="$HOME/intellij-idea/bin:$PATH"
 # golang
 export PATH="$PATH:/usr/local/go/bin"
 
+# rust
+export PATH="$PATH:$HOME/.cargo/bin"
+
+# pnpm
+export PNPM_HOME="/Users/luc/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
