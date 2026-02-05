@@ -22,17 +22,17 @@ vim.keymap.set("n", "<leader>mn", "<cmd>Mason<CR>", { desc = "Open Mason" })
 vim.keymap.set({ "n", "v" }, "gd", "<C-]>", { desc = "Go to definition" })
 
 vim.keymap.set("n", "<leader>ca", function()
-  vim.lsp.buf.code_action()
+    vim.lsp.buf.code_action()
 end, { desc = "Code actions" })
 vim.keymap.set("v", "<leader>ca", function()
-  vim.lsp.buf.code_action({ range = true })
+    vim.lsp.buf.code_action({ range = true })
 end, { desc = "Code actions (range)" })
 vim.keymap.set("n", "<Esc>", function()
-  for _, win in ipairs(vim.api.nvim_list_wins()) do
-    if vim.api.nvim_win_get_config(win).relative == "win" then
-      vim.api.nvim_win_close(win, false)
+    for _, win in ipairs(vim.api.nvim_list_wins()) do
+        if vim.api.nvim_win_get_config(win).relative == "win" then
+            vim.api.nvim_win_close(win, false)
+        end
     end
-  end
 end, { desc = "Close floating windows" })
 
 vim.keymap.set({ "n", "v", "x" }, "<leader>y", '"+y', { desc = "Yank to system clipboard" })
@@ -43,9 +43,9 @@ vim.keymap.set("n", ";", ":")
 vim.keymap.set("n", ":", ";")
 
 vim.keymap.set({ "n", "v" }, "<leader>in", function()
-  vim.lsp.buf.hover({
-    silent = false,
-    width = 80,
-  })
+    vim.lsp.buf.hover({
+        silent = false,
+        width = 80,
+    })
 end, { desc = "Inspect symbol using LSP" })
 vim.keymap.set("n", "<leader>ie", vim.diagnostic.open_float, { desc = 'Inspect error (open diagnostic)' })
