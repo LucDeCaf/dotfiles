@@ -91,3 +91,9 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Add .NET Core SDK tools
+export PATH="$PATH:/Users/luc/.dotnet/tools"
+
+# dotnet-core-uninstall
+export PATH="$HOME/dotnet-core-uninstall:$PATH"
