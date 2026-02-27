@@ -26,6 +26,8 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias vim=nvim
 alias cd=z
+alias timeout=gtimeout
+alias vimdiff="nvim -d"
 
 # quick access to common files
 export NVIM_CONF="$HOME/.config/nvim"
@@ -94,6 +96,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Add .NET Core SDK tools
 export PATH="$PATH://luc/.dotnet/tools"
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # dotnet-core-uninstall
 export PATH="$HOME/dotnet-core-uninstall:$PATH"

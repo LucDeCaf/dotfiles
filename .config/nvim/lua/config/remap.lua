@@ -25,8 +25,8 @@ vim.keymap.set("n", "<leader>ca", function()
     vim.lsp.buf.code_action()
 end, { desc = "Code actions" })
 vim.keymap.set("v", "<leader>ca", function()
-    vim.lsp.buf.code_action({ range = true })
-end, { desc = "Code actions (range)" })
+    vim.lsp.buf.code_action()
+end, { desc = "Code actions for selection" })
 vim.keymap.set("n", "<Esc>", function()
     for _, win in ipairs(vim.api.nvim_list_wins()) do
         if vim.api.nvim_win_get_config(win).relative == "win" then
