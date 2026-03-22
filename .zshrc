@@ -29,6 +29,9 @@ alias cd=z
 alias timeout=gtimeout
 alias vimdiff="nvim -d"
 
+# set editor
+export EDITOR=nvim
+
 # quick access to common files
 export NVIM_CONF="$HOME/.config/nvim"
 export SH_CONF="$HOME/.zshrc"

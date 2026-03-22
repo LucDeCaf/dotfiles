@@ -28,6 +28,14 @@ return {
                 "rust_analyzer",
                 "gopls",
             },
+
+            -- handlers = {
+            --     ["omnisharp"] = function()
+            --         require("lspconfig").omnisharp.setup({
+            --             cmd = { vim.fn.expand("$HOME") .. "/external/omnisharp-roslyn" }
+            --         })
+            --     end
+            -- }
         })
     end,
 }

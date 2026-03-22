@@ -49,3 +49,16 @@ vim.keymap.set({ "n", "v" }, "<leader>in", function()
     })
 end, { desc = "Inspect symbol using LSP" })
 vim.keymap.set("n", "<leader>ie", vim.diagnostic.open_float, { desc = 'Inspect error (open diagnostic)' })
+
+vim.keymap.set(
+    "n",
+    "<leader>t2",
+    "<cmd>set tabstop=2<CR><cmd>set shiftwidth=2<CR><cmd>echo 'Tab size is 2'<CR>",
+    { desc = "Set tab size to 2" }
+)
+vim.keymap.set(
+    "n",
+    "<leader>t4",
+    "<cmd>set tabstop=4<CR><cmd>set shiftwidth=4<CR><cmd>echo 'Tab size is 4'<CR>",
+    { desc = "Set tab size to 4" }
+)
