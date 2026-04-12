@@ -25,7 +25,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias vim=nvim
-alias cd=z
 alias timeout=gtimeout
 alias vimdiff="nvim -d"
 
@@ -41,9 +40,6 @@ export EDITOR=nvim
 # quick access to common files
 export NVIM_CONF="$HOME/.config/nvim"
 export SH_CONF="$HOME/.zshrc"
-
-# zoxide
-eval "$(zoxide init zsh)"
 
 # java
 export PATH="$HOME/jdk-25/bin:$PATH"
@@ -115,3 +111,7 @@ export PATH="$PATH:$HOME/external/mongosh/bin"
 
 # aws-vault
 export AWS_VAULT_KEYCHAIN_NAME=login
+
+# zoxide
+eval "$(zoxide init zsh)"
+alias cd=z
