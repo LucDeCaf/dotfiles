@@ -29,6 +29,12 @@ alias cd=z
 alias timeout=gtimeout
 alias vimdiff="nvim -d"
 
+# Functions
+
+jwt-decode() {
+  jq -R 'split(".") |.[0:2] | map(@base64d) | map(fromjson)' <<< $1
+}
+
 # set editor
 export EDITOR=nvim
 
@@ -103,3 +109,9 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # dotnet-core-uninstall
 export PATH="$HOME/dotnet-core-uninstall:$PATH"
+
+# mongosh
+export PATH="$PATH:$HOME/external/mongosh/bin"
+
+# aws-vault
+export AWS_VAULT_KEYCHAIN_NAME=login
