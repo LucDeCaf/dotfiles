@@ -115,3 +115,8 @@ export AWS_VAULT_KEYCHAIN_NAME=login
 # zoxide
 eval "$(zoxide init zsh)"
 alias cd=z
+
+# device-specific overrides
+if [ -f "$HOME/.zshrc.local" ]; then
+    source $HOME/.zshrc.local
+fi
