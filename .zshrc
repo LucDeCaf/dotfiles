@@ -60,13 +60,7 @@ export PATH="$PATH:/usr/local/go/bin"
 # rust
 export PATH="$PATH:$HOME/.cargo/bin"
 
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+# deno
 . "$HOME/.deno/env"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
@@ -100,7 +94,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Add .NET Core SDK tools
-export PATH="$PATH://luc/.dotnet/tools"
+export PATH="$PATH:$HOME/.dotnet/tools"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # dotnet-core-uninstall
@@ -109,9 +103,20 @@ export PATH="$HOME/dotnet-core-uninstall:$PATH"
 # mongosh
 export PATH="$PATH:$HOME/external/mongosh/bin"
 
+# flutter
+export PATH="$HOME/develop/flutter/bin:$PATH"
+
 # aws-vault
 export AWS_VAULT_KEYCHAIN_NAME=login
 
 # zoxide
 eval "$(zoxide init zsh)"
 alias cd=z
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
