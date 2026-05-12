@@ -120,3 +120,8 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
+
+# device-specific overrides
+if [ -f "$HOME/.zshrc.local" ]; then
+    source $HOME/.zshrc.local
+fi
