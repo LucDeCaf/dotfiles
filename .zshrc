@@ -23,16 +23,21 @@ autoload -U compinit && compinit
 # Load plugins
 source $ZSH/oh-my-zsh.sh
 
-# Aliases
+# --- Functions and Aliases ---
+
 alias vim=nvim
 alias timeout=gtimeout
 alias vimdiff="nvim -d"
 
-# Functions
-
 jwt-decode() {
   jq -R 'split(".") |.[0:2] | map(@base64d) | map(fromjson)' <<< $1
 }
+
+copy() {
+  cat $1 | pbcopy
+}
+
+# --- General ---
 
 # set editor
 export EDITOR=nvim
