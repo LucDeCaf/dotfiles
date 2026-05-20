@@ -13,6 +13,9 @@ vim.wo.relativenumber = true
 vim.opt.syntax = "on"
 vim.opt.filetype = "on"
 
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 

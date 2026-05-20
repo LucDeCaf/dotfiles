@@ -31,6 +31,13 @@ return {
 			},
 		})
 
+		-- Interpret '.mdx' as markdown
+		vim.filetype.add({
+			extension = {
+				mdx = "markdown",
+			},
+		})
+
 		require("mason").setup()
 		require("mason-lspconfig").setup({
 			ensure_installed = {
