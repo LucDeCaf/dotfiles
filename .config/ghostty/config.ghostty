@@ -1,0 +1,17 @@
+# General
+font-size = 16
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+font-feature = -calt, -liga, -dlig
+
+# Cursor
+cursor-style-blink = false
+
+# Mouse
+mouse-hide-while-typing = true
+
+# Neovim doesn't fill terminal otherwise
+window-padding-y = 0
+window-padding-x = 0
+window-padding-balance = true
+window-padding-color = extend
+
