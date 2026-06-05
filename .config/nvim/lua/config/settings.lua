@@ -7,6 +7,9 @@ vim.opt.smarttab = true
 vim.opt.swapfile = false
 vim.opt.scrolloff = 5
 
+vim.opt.wrap = true
+vim.opt.linebreak = true
+
 vim.wo.number = true
 vim.wo.relativenumber = true
 

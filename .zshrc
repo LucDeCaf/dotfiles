@@ -114,9 +114,11 @@ export PATH="$HOME/develop/flutter/bin:$PATH"
 # aws-vault
 export AWS_VAULT_KEYCHAIN_NAME=login
 
-# zoxide
-eval "$(zoxide init zsh)"
-alias cd=z
+# zoxide (only initialize in interactive shells)
+if [[ $- == *i* ]]; then
+  eval "$(zoxide init zsh)"
+  alias cd=z
+fi
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
