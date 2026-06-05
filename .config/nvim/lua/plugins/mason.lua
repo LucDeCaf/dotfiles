@@ -1,58 +1,59 @@
 return {
-	"mason-org/mason-lspconfig.nvim",
-	event = { "BufNewFile", "BufReadPre" },
-	cmd = { "LspStart" },
-	dependencies = {
-		"mason-org/mason.nvim",
-		"neovim/nvim-lspconfig",
-	},
-	config = function()
-		-- tell Lua about the 'vim' global
-		vim.lsp.config("lua_ls", {
-			settings = {
-				Lua = {
-					diagnostics = {
-						globals = {
-							"vim",
-						},
-					},
-				},
-			},
-		})
+    "mason-org/mason-lspconfig.nvim",
+    event = { "BufNewFile", "BufReadPre" },
+    cmd = { "LspStart" },
+    dependencies = {
+        "mason-org/mason.nvim",
+        "neovim/nvim-lspconfig",
+    },
+    config = function()
+        -- tell Lua about the 'vim' global
+        vim.lsp.config("lua_ls", {
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = {
+                            "vim",
+                        },
+                    },
+                },
+            },
+        })
 
-		-- PowerSync '!env' tag
-		vim.lsp.config("yamlls", {
-			settings = {
-				yaml = {
-					customTags = {
-						"!env",
-					},
-				},
-			},
-		})
+        -- PowerSync '!env' tag
+        vim.lsp.config("yamlls", {
+            settings = {
+                yaml = {
+                    customTags = {
+                        "!env",
+                    },
+                },
+            },
+        })
 
-		-- Interpret '.mdx' as markdown
-		vim.filetype.add({
-			extension = {
-				mdx = "markdown",
-			},
-		})
+        -- Interpret '.mdx' as markdown
+        vim.filetype.add({
+            extension = {
+                mdx = "markdown",
+            },
+        })
 
-		require("mason").setup()
-		require("mason-lspconfig").setup({
-			ensure_installed = {
-				"lua_ls",
-				"ts_ls",
-				"rust_analyzer",
-			},
+        require("mason").setup()
+        require("mason-lspconfig").setup({
+            ensure_installed = {
+                "lua_ls",
+                "ts_ls",
+                "rust_analyzer",
+            },
 
-			-- handlers = {
-			--     ["omnisharp"] = function()
-			--         require("lspconfig").omnisharp.setup({
-			--             cmd = { vim.fn.expand("$HOME") .. "/external/omnisharp-roslyn" }
-			--         })
-			--     end
-			-- }
-		})
-	end,
+            -- handlers = {
+            --     ["omnisharp"] = function()
+            --         require("lspconfig").omnisharp.setup({
+            --             cmd = { vim.fn.expand("$HOME") .. "/external/omnisharp-roslyn" }
+            --         })
+            --     end
+            -- }
+        })
+        require("lspconfig").clangd.setup({})
+    end,
 }
