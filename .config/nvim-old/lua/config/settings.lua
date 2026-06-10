@@ -1,0 +1,31 @@
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smarttab = true
+vim.opt.swapfile = false
+vim.opt.scrolloff = 5
+
+vim.opt.wrap = true
+vim.opt.linebreak = true
+
+vim.wo.number = true
+vim.wo.relativenumber = true
+
+vim.opt.syntax = "on"
+vim.opt.filetype = "on"
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+
+vim.opt.mouse = "a"
+
+vim.o.termguicolors = true
+vim.o.signcolumn = "number"
+vim.o.winborder = "rounded"
+
+vim.diagnostic.config({ virtual_text = true })
