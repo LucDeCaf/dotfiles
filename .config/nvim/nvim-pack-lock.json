@@ -45,6 +45,10 @@
     "snacks.nvim": {
       "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
       "src": "https://github.com/folke/snacks.nvim"
+    },
+    "ts-installer": {
+      "rev": "5df71bd3124ff94561e7ac2a5bd1081f417a7971",
+      "src": "file:///home/luc/Projects/personal/ts-installer"
     }
   }
 }
