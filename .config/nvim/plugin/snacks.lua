@@ -10,7 +10,7 @@ Snacks.setup({
 
 -- stylua: ignore start
 
-vim.keymap.set({'n', 'v'}, '<leader>ff', function() Snacks.picker.files() end)
-vim.keymap.set({'n', 'v'}, '<leader>fg', function() Snacks.picker.grep() end)
+vim.keymap.set({'n', 'v'}, '<leader>f', function() Snacks.picker.files() end)
+vim.keymap.set({'n', 'v'}, '<leader>g', function() Snacks.picker.grep() end)
 
 -- stylua: ignore end

@@ -42,3 +42,33 @@ vim.api.nvim_create_autocmd("User", {
 })
 
 vim.pack.add(plugins)
+
+-- Plugin management commands
+vim.api.nvim_create_user_command("PackUpdate", function()
+	vim.pack.update()
+end, {})
+
+vim.api.nvim_create_user_command("PackInstall", function()
+	vim.pack.add(plugins)
+end, {})
+
+vim.api.nvim_create_user_command("PackClean", function()
+	-- stylua: ignore
+	local inactive = vim.iter(vim.pack.get())
+		:filter(function(x) return not x.active end)
+        :map(function(x) return x.spec.name end)
+		:totable()
+
+	if #inactive == 0 then
+		vim.print("No inactive plugins")
+		return
+	end
+
+	vim.print("Deleting inactive plugins...")
+	vim.pack.del(inactive)
+	if #inactive == 1 then
+		vim.print("Deleted 1 plugin.")
+	else
+		vim.print("Deleted " .. #inactive .. " plugins.")
+	end
+end, {})
