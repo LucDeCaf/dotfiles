@@ -45,6 +45,10 @@
     "snacks.nvim": {
       "rev": "882c996cf28183f4d63640de0b4c02ec886d01f2",
       "src": "https://github.com/folke/snacks.nvim"
+    },
+    "tree-sitter-manager.nvim": {
+      "rev": "95f81026390077f8eea9eef6d32ad59d4c3bd3ee",
+      "src": "https://github.com/romus204/tree-sitter-manager.nvim"
     }
   }
 }
