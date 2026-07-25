@@ -31,16 +31,12 @@ local lsp = {
 
 	-- JS/TS
 	ts_ls = {
-		cmd = { "typescript-language-server", "--stdio" },
+		cmd = { "tsc", "--lsp", "--stdio" },
 		filetypes = {
 			"javascript",
 			"typescript",
 			"javascriptreact",
 			"typescriptreact",
-			"html",
-			"css",
-			"json",
-			"jsonc",
 		},
 		root_markers = { "package.json", ".git" },
 	},
