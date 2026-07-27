@@ -22,5 +22,5 @@ brew install stow
 
 ```sh
 cd dotfiles
-stow . --adopt && git --reset hard
+stow . --adopt && git reset --hard
 ```
