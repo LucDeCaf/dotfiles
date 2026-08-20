@@ -46,6 +46,9 @@ export EDITOR=nvim
 export NVIM_CONF="$HOME/.config/nvim"
 export SH_CONF="$HOME/.zshrc"
 
+# neovim (local install)
+export PATH="$HOME/neovim/bin:$PATH"
+
 # java
 export PATH="$HOME/jdk-25/bin:$PATH"
 
