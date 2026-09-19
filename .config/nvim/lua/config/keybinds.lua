@@ -61,13 +61,16 @@ vim.keymap.set("n", "<leader>ie", vim.diagnostic.open_float, { desc = "Inspect e
 
 vim.keymap.set(
 	"n",
-	"<leader>t2",
+	"<leader>tt",
 	"<cmd>set tabstop=2<CR><cmd>set shiftwidth=2<CR><cmd>echo 'Tab size is 2'<CR>",
 	{ desc = "Set tab size to 2" }
 )
 vim.keymap.set(
 	"n",
-	"<leader>t4",
+	"<leader>tT",
 	"<cmd>set tabstop=4<CR><cmd>set shiftwidth=4<CR><cmd>echo 'Tab size is 4'<CR>",
 	{ desc = "Set tab size to 4" }
 )
+vim.keymap.set("n", "<leader>t?", function()
+	print("Tab size is " .. vim.opt.shiftwidth:get())
+end, { desc = "Get current tab size" })

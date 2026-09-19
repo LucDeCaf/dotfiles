@@ -37,13 +37,14 @@ local lsp = {
 			"typescript",
 			"javascriptreact",
 			"typescriptreact",
+			"json",
 		},
 		root_markers = { "package.json", ".git" },
 	},
 
 	-- Rust
 	rust_analyzer = {
-		cmd = { "rust_analyzer" },
+		cmd = { "rust-analyzer" },
 		filetypes = { "rust" },
 		root_markers = { "cargo.toml", ".git" },
 	},
