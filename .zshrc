@@ -46,6 +46,9 @@ export EDITOR=nvim
 export NVIM_CONF="$HOME/.config/nvim"
 export SH_CONF="$HOME/.zshrc"
 
+# neovim (local install)
+export PATH="$HOME/neovim/bin:$PATH"
+
 # java
 export PATH="$HOME/jdk-25/bin:$PATH"
 
@@ -83,11 +86,6 @@ autoload -Uz compinit
 compinit
 # End of Docker CLI completions
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-
 # postgres
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
@@ -99,7 +97,8 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Add .NET Core SDK tools
-export PATH="$PATH:$HOME/.dotnet/tools"
+export DOTNET_ROOT="$HOME/.dotnet"
+export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # dotnet-core-uninstall
@@ -128,7 +127,8 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# device-specific overrides
+# --- Device-specific overrides ---
+
 if [ -f "$HOME/.zshrc.local" ]; then
     source $HOME/.zshrc.local
 fi
