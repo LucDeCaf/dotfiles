@@ -14,6 +14,7 @@ local plugins = {
 	{ src = "https://github.com/stevearc/conform.nvim" },
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 	{ src = "https://github.com/romus204/tree-sitter-manager.nvim" },
+	{ src = "https://github.com/windwp/nvim-autopairs" },
 }
 
 local postinstalls = {
