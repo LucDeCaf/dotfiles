@@ -17,14 +17,8 @@ local lsp = {
 	},
 
 	-- C#
-	csharp_ls = {
-		cmd = function(dispatchers, config)
-			return vim.lsp.rpc.start({ "csharp-language-server" }, dispatchers, {
-				cwd = config.cmd_cwd or config.root_dir,
-				env = config.cmd_env,
-				detached = config.detached,
-			})
-		end,
+	roslyn = {
+		cmd = { "roslyn-language-server", "--stdio", "--autoLoadProjects" },
 		root_markers = { "*.sln", "*.slnx", "*.csproj", ".git" },
 		filetypes = { "cs" },
 	},
@@ -40,6 +34,13 @@ local lsp = {
 			"json",
 		},
 		root_markers = { "package.json", ".git" },
+	},
+
+	-- Dart
+	dart = {
+		cmd = { "dart", "language-server", "--protocol=lsp" },
+		filetypes = { "dart" },
+		root_markers = { "pubspec.yaml", ".git" },
 	},
 
 	-- Rust
